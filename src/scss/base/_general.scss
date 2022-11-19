@@ -1,0 +1,235 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+    01. Basic Styles
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+:root {
+  font-size: 16px !important;
+  background-color: $gray-100;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pt-1 {
+  padding-top: 0.25rem !important;
+}
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+.font-12 {
+  font-size: $text-caption;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.load-more {
+  padding-block: 0.3rem;
+  cursor: pointer;
+  padding-inline: 7rem;
+  border-radius: 5px;
+  border-width: 1px;
+  display: flex;
+  margin: 15px auto;
+}
+
+/**** Loader ****/
+.determinate-loader {
+  height: 3px;
+  background-color: #f11946;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.determinate-loader--bar {
+  background-color: $dark-blue;
+  height: 100%;
+  transition: all 1s ease-out;
+}
+/**** Loader ****/
+
+/*** Mobile Loader ***/
+.mobile-loader {
+  background-color: transparent;
+  color: $dark-blue;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/*** Mobile Loader ***/
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0;
+  }
+}
+/* Spinner for loading */
+.sk-chase {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  animation: sk-chase 2.5s infinite linear both;
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+.sk-chase-dot:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: rgb(50, 67, 86);
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:nth-child(1) {
+  animation-delay: -1.1s;
+}
+.sk-chase-dot:nth-child(2) {
+  animation-delay: -1s;
+}
+.sk-chase-dot:nth-child(3) {
+  animation-delay: -0.9s;
+}
+.sk-chase-dot:nth-child(4) {
+  animation-delay: -0.8s;
+}
+.sk-chase-dot:nth-child(5) {
+  animation-delay: -0.7s;
+}
+.sk-chase-dot:nth-child(6) {
+  animation-delay: -0.6s;
+}
+.sk-chase-dot:nth-child(1):before {
+  animation-delay: -1.1s;
+}
+.sk-chase-dot:nth-child(2):before {
+  animation-delay: -1s;
+}
+.sk-chase-dot:nth-child(3):before {
+  animation-delay: -0.9s;
+}
+.sk-chase-dot:nth-child(4):before {
+  animation-delay: -0.8s;
+}
+.sk-chase-dot:nth-child(5):before {
+  animation-delay: -0.7s;
+}
+.sk-chase-dot:nth-child(6):before {
+  animation-delay: -0.6s;
+}
+
+@keyframes sk-chase {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase-dot {
+  80%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4);
+  }
+  100%,
+  0% {
+    transform: scale(1);
+  }
+}
+
+//NotFound
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  &__content {
+    .title {
+      padding-top: 1rem;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    p {
+      font-weight: 700;
+      padding-bottom: 1rem;
+    }
+  }
+  a {
+    cursor: pointer;
+    color: $dark-blue;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    i {
+      padding: 0 0.3rem;
+    }
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      color: #dc3545;
+    }
+  }
+}

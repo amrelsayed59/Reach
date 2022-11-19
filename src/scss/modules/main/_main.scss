@@ -1,0 +1,97 @@
+.main {
+  &__head {
+    // padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: 1px solid #e1e1e1;
+    p {
+      color: $dark-blue;
+    }
+  }
+  &__result {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  &__filters {
+    // display: none;
+    margin: 0.5rem 0;
+    > select {
+      padding: 0.5rem;
+      border-color: #dedede;
+      cursor: pointer;
+      color: #2e2e2e;
+    }
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  &__listimg {
+    max-width: 300px;
+    min-width: 240px;
+    margin-right: 16px;
+    max-height: 175px;
+    position: relative;
+  }
+  &__listimg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__time {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: #1b1b1b;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    p {
+      font-size: $text-caption;
+    }
+  }
+  &__listcontent {
+    width: 100%;
+  }
+  &__listcontent-title {
+    font-weight: 700;
+    color: $dark-blue;
+    max-width: 70%;
+    font-size: $text-body + 4;
+  }
+  &__listcontent-subtitle {
+    font-size: $text-caption + 2;
+    margin-bottom: 0.5rem;
+    color: $dark-gray;
+    max-width: 70%;
+  }
+  &__listcontent-text {
+    font-size: $text-caption + 2;
+    color: $dark-gray;
+    max-width: 70%;
+  }
+} //main
+
+//@mediaQuery
+@media (max-width: 575px) {
+  .main {
+    padding: 0.5rem;
+    &__listimg {
+      max-width: 150px;
+      min-width: 125px;
+      max-height: 100px;
+    }
+    &__listcontent-title {
+      max-width: 100%;
+      font-size: $text-caption;
+    }
+    &__listcontent-subtitle {
+      max-width: 100%;
+      font-size: $text-caption - 1;
+    }
+    &__listcontent-text {
+      max-width: 100%;
+      font-size: $text-caption - 1;
+    }
+  }
+}
